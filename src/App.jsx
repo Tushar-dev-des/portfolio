@@ -1,5 +1,5 @@
 import "./App.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
@@ -11,6 +11,8 @@ import FallingPills from "./FallingPills";
 import About from "./About";
 import Gallery from "./Gallery";
 import CaseStudy from "./CaseStudy";
+import 'react-tooltip/dist/react-tooltip.css';
+import { Tooltip } from 'react-tooltip';
 
 
 
@@ -19,6 +21,15 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother, useGSAP);
 function App() {
     const wrapperRef = useRef(null);
     const contentRef = useRef(null);
+    const [emailCopied, setEmailCopied] = useState(false);
+
+    const handleCopyEmail = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        navigator.clipboard.writeText("tusharxmahajan@gmail.com");
+        setEmailCopied(true);
+        setTimeout(() => setEmailCopied(false), 2000);
+    };
 
     useGSAP(() => {
         const heroSplit = new SplitText(".title", { type: "chars" });
@@ -83,7 +94,13 @@ function App() {
                                 </a>
                             </div>
                             <div className="hyperlinks">
-                                <div>tusharxmahajan@gmail.com</div>
+                                <a data-tooltip-id="email-tooltip" href="https://mail.google.com/mail/?view=cm&fs=1&to=tusharxmahajan@gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>tusharxmahajan@gmail.com</a>
+                                <Tooltip id="email-tooltip" clickable={true} style={{ zIndex: 10000, backgroundColor: "#D4C8B0", color: "#111110", borderRadius: "0px" }}>
+                                    <div style={{ display: 'flex', flexDirection: 'column', gap: "4px", fontSize: "12px", lineHeight: "16px", fontWeight: "400", letterSpacing: "0.2px" }}>
+                                        <strong>: goes to compose Gmail in default account</strong>
+                                        <span>otherwise <span onClick={handleCopyEmail} style={{ cursor: 'pointer', textDecoration: 'underline', marginTop: '4px' }}>{emailCopied ? "✓copied!" : "copy email"}</span></span>
+                                    </div>
+                                </Tooltip>
                                 <img onClick={() => window.open("https://www.linkedin.com/in/tusharxmahajan/", "_blank")} src={linkedIn} alt="" style={{ height: "20px", width: "20px", cursor: "pointer" }} />
                             </div>
                         </div>

@@ -29,7 +29,7 @@ const CaseStudy = () => {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % carouselData.length);
-        }, 5000);
+        }, 6000);
         return () => clearInterval(interval);
     }, []);
 
