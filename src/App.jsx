@@ -3,6 +3,8 @@ import { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger, SplitText, ScrollSmoother } from "gsap/all";
+import downArrow from "./assets/double_down.svg";
+import linkedIn from "./assets/linked_in.svg";
 import Loader from "./Loader";
 import PatternBg from "./PatternBg";
 import FallingPills from "./FallingPills";
@@ -82,7 +84,7 @@ function App() {
                             </div>
                             <div className="hyperlinks">
                                 <div>tusharxmahajan@gmail.com</div>
-                                <img src="src/assets/linked_in.svg" alt="" style={{ height: "20px", width: "20px" }} />
+                                <img onClick={() => window.open("https://www.linkedin.com/in/tusharxmahajan/", "_blank")} src={linkedIn} alt="" style={{ height: "20px", width: "20px", cursor: "pointer" }} />
                             </div>
                         </div>
                         <div className="hero">
@@ -112,7 +114,7 @@ function App() {
                                 <div className="desc">
                                     <p>
                                         <img
-                                            src="src/assets/double_down.svg"
+                                            src={downArrow}
                                             alt=""
                                             style={{ height: "24px", width: "24px" }}
                                         />
