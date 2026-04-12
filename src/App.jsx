@@ -33,7 +33,7 @@ function App() {
         });
 
         gsap.from(heroSplit.chars, {
-            // delay: 6,
+            delay: 6,
             yPercent: 100,
             duration: 1,
             ease: "expo.out",
@@ -43,7 +43,7 @@ function App() {
 
 
         gsap.from(".desc p", {
-            // delay: 6.5,
+            delay: 6.5,
             yPercent: 200,
             duration: 1.5,
             ease: "expo.out",
@@ -68,7 +68,7 @@ function App() {
 
     return (
         <div>
-            {/* <Loader /> */}
+            <Loader />
             <PatternBg />
 
             <div className="custom_cursor">view</div>
