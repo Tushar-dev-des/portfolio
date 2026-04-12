@@ -1,0 +1,58 @@
+.navbar {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    font-size: 14px;
+    line-height: 22px;
+    color: #786A30;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+}
+
+.hyperlinks {
+    grid-column: 8/span 4;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.first_fold {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.hero {
+    height: 100%;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.title {
+    font-size: 80px;
+    line-height: 88px;
+    letter-spacing: -2px;
+    font-weight: 400;
+    color: #D4C8B0;
+    overflow: hidden;
+}
+
+.desc {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    font-size: 14px;
+    line-height: 22px;
+    color: #8A7A40;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    overflow: hidden;
+}
+
+.desc p {
+    grid-column: 8/span 4;
+    overflow: hidden;
+}

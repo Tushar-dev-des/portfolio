@@ -1,0 +1,51 @@
+.third_fold {
+    height: 400vh;
+}
+
+.about_container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 1rem;
+    padding: 2rem;
+    height: 250vh;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.about {
+    grid-column: 4/span 6;
+    font-size: 32px;
+    line-height: 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+    letter-spacing: 0.2px;
+    color: #D4C8B0;
+}
+
+.puzzle_container {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    position: relative;
+    height: 100vh;
+    /* background: #951919; */
+    z-index: -1;
+}
+
+.puzzle {
+    grid-column: 4/span 6;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    opacity: 0.32;
+}
+
+.puzzle div {
+    margin: 0 -2em;
+}

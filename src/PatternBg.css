@@ -1,0 +1,45 @@
+.pattern_bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+    display: grid;
+    background: #111110;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    padding: 0 2rem;
+    pointer-events: none;
+}
+
+.pattern_bg_one {
+    grid-column: 1 / span 3;
+    /* Use background gradients to control width, dash length and gap */
+    background-image: linear-gradient(to bottom, #3a353050 50%, transparent 50%);
+    background-size: 1px 12px;
+    /* 1.5px line width, 16px dash cycle (8px dash, 8px gap) */
+    background-position: left;
+    background-repeat: repeat-y;
+}
+
+.pattern_bg_two {
+    grid-column: 4 / span 4;
+    background-image: linear-gradient(to bottom, #3a353050 50%, transparent 50%);
+    background-size: 1px 12px;
+    background-position: left;
+    background-repeat: repeat-y;
+}
+
+.pattern_bg_three {
+    grid-column: 8 / span 2;
+    background-image:
+        linear-gradient(to bottom, #3a353050 50%, transparent 50%),
+        linear-gradient(to bottom, #3a353050 50%, transparent 50%);
+    background-size: 1px 12px;
+    background-position: left, right;
+    background-repeat: repeat-y;
+}
+
+.pattern_bg_four {
+    grid-column: 10 / span 3;
+}
