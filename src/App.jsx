@@ -133,7 +133,7 @@ function App() {
                             fontWeight: "400",
                             color: "#D4C8B0",
                         }}>
-                            Gallery
+                            Gallery hello
                         </div>
                     </div>
 
