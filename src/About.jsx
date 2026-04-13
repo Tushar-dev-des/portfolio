@@ -16,52 +16,29 @@ const About = () => {
 
         const aboutSplit = new SplitText(".about_content", { type: "words" });
 
-        // gsap.from(aboutSplit.words, {
-        //   scrollTrigger: {
-        //     trigger: ".about_content",
-        //     start: "top 90%",
-        //     end: "top -10%",
-        //     scrub: true,
-        //     markers: true,
-        //   },
-        //   opacity: 0,
-        //   stagger: 0.07,
-        //   y: 50,
-        //   rotation: 15,
-        // });
-        gsap.from(aboutSplit.words, {
-            scrollTrigger: {
-                trigger: ".about_content",
-                start: "top 60%",
-                end: "top -150%",
-                scrub: true,
-            },
-            opacity: 0,
-            stagger: 0.07,
-            y: 50,
-            rotation: 15,
-        });
+        // gsap.to('.about', {
+        //     scrollTrigger: {
+        //         trigger: ".about_content",
+        //         start: "top 70%",
+        //         end: "top -130%",
+        //         scrub: true,
+        //     },
+        //     scale: 0.9,
+        //     y: 1100,
+        // })
+
+
 
         // gsap.to('.about', {
-        //   scrollTrigger: {
-        //     trigger: ".about_content",
-        //     start: "top 90%",
-        //     end: "top -20%",
-        //     scrub: true,
-        //   },
-        //   scale: 0.9,
-        //   y: 80,
+        //     scrollTrigger: {
+        //         trigger: ".about_container",
+        //         start: "top top",
+        //         end: "bottom bottom",
+        //         scrub: true,
+        //         pin: true,
+        //         pinSpacing: false,
+        //     },
         // })
-        gsap.to('.about', {
-            scrollTrigger: {
-                trigger: ".about_content",
-                start: "top 60%",
-                end: "top -200%",
-                scrub: true,
-            },
-            scale: 0.9,
-            y: 1200,
-        })
 
         gsap.from('.puzzle_item', {
             scrollTrigger: {
@@ -117,12 +94,66 @@ const About = () => {
 
         ScrollTrigger.create({
             trigger: ".puzzle_container",
-            pin: true,
             start: "top top",
+            pin: true,
             endTrigger: ".third_fold",
             end: "bottom bottom",
             pinSpacing: false,
         });
+
+        ScrollTrigger.create({
+            trigger: ".about_container",
+            start: "top top",
+            pin: true,
+            endTrigger: ".third_fold",
+            end: "bottom bottom",
+            pinSpacing: false,
+        });
+
+        // gsap.to('.puzzle_container', {
+        //     scrollTrigger: {
+        //         trigger: ".third_fold",
+        //         start: "top top",
+        //         end: "bottom bottom",
+        //         pin: true,
+        //         pinSpacing: false,
+        //     },
+        // })
+
+        // gsap.to('.about_container', {
+        //     scrollTrigger: {
+        //         trigger: ".third_fold",
+        //         start: "top -100%",
+        //         end: "bottom bottom",
+        //         pin: true,
+        //         pinSpacing: false,
+        //     },
+        // })
+
+        gsap.from(aboutSplit.words, {
+            scrollTrigger: {
+                trigger: ".third_fold",
+                start: "top -100%",
+                end: "bottom bottom",
+                scrub: true,
+            },
+            opacity: 0,
+            stagger: 0.07,
+            y: 30,
+            rotation: 15,
+        });
+
+        gsap.from('.about', {
+            scrollTrigger: {
+                trigger: ".third_fold",
+                start: "top -100%",
+                end: "bottom bottom",
+                scrub: true,
+            },
+            scale: 0.9,
+            y: 100
+        })
+
 
     }, []);
 
@@ -139,7 +170,6 @@ const About = () => {
             </div>
             <div className="about_container">
                 <div className="about">
-
                     <div className="about_content">
                         being a systems thinker, I’ve found & developed my own robust way of
                         approaching problems.
@@ -152,6 +182,7 @@ const About = () => {
                     {/* <div className="about_content action">Read my complete approach</div> */}
                 </div>
             </div>
+
         </div>
     );
 };
