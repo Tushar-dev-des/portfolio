@@ -81,12 +81,12 @@
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: 400;
     text-align: center;
     pointer-events: none;
     z-index: 9999;
     opacity: 0;
     transform: scale(0);
-    border: 1px solid #D4C8B0;
+    border: 1px dashed #D4C8B0;
     /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
 }
