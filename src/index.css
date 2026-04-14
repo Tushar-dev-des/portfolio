@@ -1,13 +1,9 @@
-@font-face {
-    font-family: 'SF Pro';
-    src: url('./fonts/SF-Pro.woff2') format('woff2');
-}
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'SF Pro';
+    font-family: 'SF Pro Display';
+    /* font-family: 'BDO Grotesk'; */
 }
 
 

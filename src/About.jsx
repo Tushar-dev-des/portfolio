@@ -16,6 +16,30 @@ const About = () => {
 
         const aboutSplit = new SplitText(".about_content", { type: "words" });
 
+        // gsap.to('.about', {
+        //     scrollTrigger: {
+        //         trigger: ".about_content",
+        //         start: "top 70%",
+        //         end: "top -130%",
+        //         scrub: true,
+        //     },
+        //     scale: 0.9,
+        //     y: 1100,
+        // })
+
+
+
+        // gsap.to('.about', {
+        //     scrollTrigger: {
+        //         trigger: ".about_container",
+        //         start: "top top",
+        //         end: "bottom bottom",
+        //         scrub: true,
+        //         pin: true,
+        //         pinSpacing: false,
+        //     },
+        // })
+
         gsap.from('.puzzle_item', {
             scrollTrigger: {
                 trigger: ".puzzle_container",
@@ -35,10 +59,11 @@ const About = () => {
                 end: "top -230%",
                 scrub: true,
             },
+
             opacity: 0,
             stagger: 0.1,
             y: -200,
-            x: 200,
+            x: 150,
             rotation: -45,
         })
 
@@ -49,14 +74,16 @@ const About = () => {
                 end: "top -280%",
                 scrub: true,
             },
+
             opacity: 0,
             stagger: 0.1,
             y: 200,
-            x: 200,
+            x: 150,
             rotation: 45,
         })
 
         gsap.to('.puzzle', {
+
             scrollTrigger: {
                 trigger: ".third_fold",
                 start: "bottom 140%",
@@ -134,11 +161,11 @@ const About = () => {
         <div className="third_fold">
             <div className="puzzle_container">
                 <div className="puzzle">
-                    <div className="puzzle_item_one puzzle_item"><img src={puzzleOne} alt="" /></div>
-                    <div className="puzzle_item_two puzzle_item"><img src={puzzleTwo} alt="" /></div>
-                    <div className="puzzle_item_three missing_item_one"><img src={puzzleThree} alt="" /></div>
-                    <div className="puzzle_item_four puzzle_item"><img src={puzzleFour} alt="" /></div>
-                    <div className="puzzle_item_five missing_item_two"><img src={puzzleFive} alt="" /></div>
+                    <div className="puzzle_item_one puzzle_item"><img src={puzzleOne} style={{ scale: '0.9' }} alt="" /></div>
+                    <div className="puzzle_item_two puzzle_item"><img src={puzzleTwo} style={{ scale: '0.9' }} alt="" /></div>
+                    <div className="puzzle_item_three missing_item_one"><img src={puzzleThree} style={{ scale: '0.9' }} alt="" /></div>
+                    <div className="puzzle_item_four puzzle_item"><img src={puzzleFour} style={{ scale: '0.9' }} alt="" /></div>
+                    <div className="puzzle_item_five missing_item_two"><img src={puzzleFive} style={{ scale: '0.9' }} alt="" /></div>
                 </div>
             </div>
             <div className="about_container">
