@@ -11,7 +11,8 @@
 }
 
 .overlay_bar {
-    background: var(--color-bg-primary);
+    /* background: #D4C8B0; */
+    background: var(--color-primary);
 }
 
 .overlay_bar_one {
