@@ -5,9 +5,8 @@
     padding: 2rem;
     font-size: 14px;
     line-height: 22px;
-    color: #786A30;
+    color: var(--color-secondary);
     font-weight: 400;
-    letter-spacing: 0.2px;
 }
 
 .hyperlinks {
@@ -36,7 +35,7 @@
     line-height: 88px;
     letter-spacing: -2px;
     font-weight: 400;
-    color: #D4C8B0;
+    color: var(--color-primary);
     overflow: hidden;
 }
 
@@ -46,9 +45,8 @@
     gap: 1rem;
     font-size: 14px;
     line-height: 22px;
-    color: #8A7A40;
+    color: var(--color-secondary);
     font-weight: 400;
-    letter-spacing: 0.2px;
     overflow: hidden;
 }
 

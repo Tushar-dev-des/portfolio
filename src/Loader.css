@@ -1,46 +1,48 @@
-
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100vh;
-  width: 100vw;
-  z-index: 1;
-  display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
-  pointer-events: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    pointer-events: none;
 }
 
 .overlay_bar {
-  background: #D4C8B0;
+    background: var(--color-bg-primary);
 }
 
 .overlay_bar_one {
-  grid-column: 1/span 3;
-  border-left: 1px solid #11111024;
-  color: #111110;
-  display: flex;
-  align-items:flex-end;
-  padding: 1rem;
+    grid-column: 1/span 3;
+    border-left: 1px solid #11111024;
+    color: var(--color-bg-dark);
+    display: flex;
+    align-items: flex-end;
+    padding: 1rem;
 }
+
 .overlay_bar_two {
-  grid-column: 4/span 4;
-  border-left: 1px solid #11111024;
+    grid-column: 4/span 4;
+    border-left: 1px solid #11111024;
 }
+
 .overlay_bar_three {
-  grid-column: 8/span 2;
-  border-left: 1px dashed #11111024;
-  border-right: 1px dashed #11111024;
+    grid-column: 8/span 2;
+    border-left: 1px dashed #11111024;
+    border-right: 1px dashed #11111024;
 }
+
 .overlay_bar_four {
-  grid-column: 10/span 3;
+    grid-column: 10/span 3;
 }
 
 .counter {
-  font-size: 88px;
-  line-height: 88px;
-  height: 88px;
-  letter-spacing: -2px;
-  font-weight: 400;
-  overflow: hidden;
+    font-size: 88px;
+    line-height: 88px;
+    height: 88px;
+    letter-spacing: -2px;
+    font-weight: 400;
+    overflow: hidden;
 }

@@ -13,12 +13,14 @@ const carouselData = [
     {
         bg: work1,
         p: "being a systems thinker, I’ve found & developed my own robust way of approaching problems",
-        h1: "DICE AI Support agent"
+        h1: "DICE AI Support agent",
+        link: 'https://www.figma.com/proto/nZ82YnOb7hylobc9T9T1gU/Notes--Lists---Arrow-flows--Community-?page-id=3283%3A215&node-id=3819-32&viewport=-27082%2C-3050%2C0.26&t=s7MO9HQ24uLMeiyu-1&scaling=min-zoom&content-scaling=fixed'
     },
     {
         bg: work2,
         p: "simplifying complex financial workflows to create intuitive and seamless user experiences",
-        h1: "Expense Filing Redesign"
+        h1: "Expense Filing Redesign",
+        link: 'https://www.figma.com/proto/ogJToxmjNOUIoMbfspHm7W/New-flight-flow?page-id=1324%3A6565&node-id=1572-5537&viewport=-946%2C-3362%2C0.12&t=9vMh6EATZXPHQePt-1&scaling=min-zoom&content-scaling=fixed'
     }
 ];
 
@@ -80,7 +82,7 @@ const CaseStudy = () => {
         <div>
 
             <div className="showreel_container">
-                <div className="showreel" onClick={() => { }} style={{ backgroundImage: `url(${carouselData[currentSlide].bg})` }}>
+                <div className="showreel" onClick={() => { window.open(carouselData[currentSlide].link, "_blank") }} style={{ backgroundImage: `url(${carouselData[currentSlide].bg})` }}>
                     <div className="showreel_content">
                         <div className="showreel_content_left" key={`content-${currentSlide}`}>
                             <p>{carouselData[currentSlide].p}</p>

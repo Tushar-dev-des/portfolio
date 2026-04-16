@@ -82,19 +82,6 @@ function App() {
             opacity: 0,
         });
 
-        gsap.from(gallerySplit.chars, {
-            scrollTrigger: {
-                trigger: ".gallery_title_container",
-                start: "top 70%",
-                toggleActions: "play none none reverse",
-            },
-            yPercent: 100,
-            duration: 1,
-            ease: "expo.out",
-            stagger: 0.02,
-            opacity: 0,
-        });
-
     }, []);
 
     return (
@@ -109,13 +96,13 @@ function App() {
                     <div className="first_fold">
                         <div className="navbar">
                             <div>
-                                <a href="#" style={{ textDecoration: "none", color: "#786A30", textWrap: "nowrap" }}>
+                                <a href="#" style={{ textDecoration: "none", color: "var(--color-secondary)", textWrap: "nowrap" }}>
                                     Tushar Mahajan
                                 </a>
                             </div>
                             <div className="hyperlinks">
                                 <a data-tooltip-id="email-tooltip" href="https://mail.google.com/mail/?view=cm&fs=1&to=tusharxmahajan@gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }} onMouseDown={startHold} onMouseUp={endHold} onMouseLeave={endHold} onTouchStart={startHold} onTouchEnd={endHold}>tusharxmahajan@gmail.com</a>
-                                <Tooltip id="email-tooltip" clickable={true} style={{ zIndex: 10000, backgroundColor: "#D4C8B0", color: "#111110", borderRadius: "0px" }}>
+                                <Tooltip id="email-tooltip" clickable={true} style={{ zIndex: 10000, backgroundColor: "var(--color-text-white)", color: "var(--color-bg-black)", borderRadius: "0px" }}>
                                     <div style={{ fontSize: "12px", lineHeight: "16px", fontWeight: "400" }}>
                                         <span>{emailCopied ? "✓copied!" : "hold click to copy"}</span>
                                     </div>
@@ -132,7 +119,7 @@ function App() {
                                 <div className="desc">
                                     <p>
                                         with{" "}
-                                        <span style={{ color: "#D4C8B0" }}>
+                                        <span style={{ color: "var(--color-primary)" }}>
                                             {" "}
                                             &gt;3 years of exp
                                         </span>{" "}

@@ -6,7 +6,7 @@
     width: 100vw;
     z-index: -1;
     display: grid;
-    background: #111110;
+    background: var(--color-bg-dark);
     grid-template-columns: repeat(12, minmax(0, 1fr));
     padding: 0 2rem;
     pointer-events: none;
@@ -34,8 +34,8 @@
 .pattern_bg_three {
     grid-column: 8 / span 2;
     background-image:
-        linear-gradient(to bottom, #3a353050 50%, transparent 50%),
-        linear-gradient(to bottom, #3a353050 50%, transparent 50%);
+        linear-gradient(to bottom, #8a7a4020 50%, transparent 50%),
+        linear-gradient(to bottom, #8a7a4020 50%, transparent 50%);
     background-size: 1px 12px;
     background-position: left, right;
     background-repeat: repeat-y;

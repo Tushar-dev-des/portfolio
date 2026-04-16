@@ -21,7 +21,7 @@
     justify-content: center;
     gap: 1rem;
     letter-spacing: 0.2px;
-    color: #D4C8B0;
+    color: var(--color-primary);
 }
 
 .puzzle_container {

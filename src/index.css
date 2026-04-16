@@ -3,6 +3,19 @@
     src: url('./fonts/SF-Pro.woff2') format('woff2');
 }
 
+:root {
+    /* Primary Colors */
+    --color-primary: #D4C8B0;
+    --color-secondary: #8a7a40;
+    --color-bg-dark: #111110;
+    --color-bg-black: #000;
+
+    /* Text Colors */
+    --color-text-white: #ffffff;
+    --color-text-selection: #3a3530;
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +26,6 @@
 
 
 ::selection {
-    background-color: #D4C8B0;
-    color: #3a3530;
+    background-color: var(--color-text-white);
+    color: var(--color-text-selection);
 }
