@@ -26,6 +26,6 @@
 
 
 ::selection {
-    background-color: var(--color-text-white);
-    color: var(--color-text-selection);
+    background-color: var(--color-primary);
+    color: var(--color-bg-dark);
 }
