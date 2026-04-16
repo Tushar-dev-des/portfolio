@@ -22,13 +22,33 @@ function App() {
     const wrapperRef = useRef(null);
     const contentRef = useRef(null);
     const [emailCopied, setEmailCopied] = useState(false);
+    const holdTimeoutRef = useRef(null);
 
     const handleCopyEmail = (e) => {
-        e.preventDefault();
-        e.stopPropagation();
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
         navigator.clipboard.writeText("tusharxmahajan@gmail.com");
         setEmailCopied(true);
         setTimeout(() => setEmailCopied(false), 2000);
+    };
+
+    const startHold = (e) => {
+        if (e) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        holdTimeoutRef.current = setTimeout(() => {
+            handleCopyEmail();
+        }, 1000);
+    };
+
+    const endHold = () => {
+        if (holdTimeoutRef.current) {
+            clearTimeout(holdTimeoutRef.current);
+            holdTimeoutRef.current = null;
+        }
     };
 
     useGSAP(() => {
@@ -94,11 +114,10 @@ function App() {
                                 </a>
                             </div>
                             <div className="hyperlinks">
-                                <a data-tooltip-id="email-tooltip" href="https://mail.google.com/mail/?view=cm&fs=1&to=tusharxmahajan@gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }}>tusharxmahajan@gmail.com</a>
+                                <a data-tooltip-id="email-tooltip" href="https://mail.google.com/mail/?view=cm&fs=1&to=tusharxmahajan@gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }} onMouseDown={startHold} onMouseUp={endHold} onMouseLeave={endHold} onTouchStart={startHold} onTouchEnd={endHold}>tusharxmahajan@gmail.com</a>
                                 <Tooltip id="email-tooltip" clickable={true} style={{ zIndex: 10000, backgroundColor: "#D4C8B0", color: "#111110", borderRadius: "0px" }}>
-                                    <div style={{ display: 'flex', flexDirection: 'column', gap: "4px", fontSize: "12px", lineHeight: "16px", fontWeight: "400", letterSpacing: "0.2px" }}>
-                                        <strong>: goes to compose Gmail in default account</strong>
-                                        <span>otherwise <span onClick={handleCopyEmail} style={{ cursor: 'pointer', textDecoration: 'underline', marginTop: '4px' }}>{emailCopied ? "✓copied!" : "copy email"}</span></span>
+                                    <div style={{ fontSize: "12px", lineHeight: "16px", fontWeight: "400" }}>
+                                        <span>{emailCopied ? "✓copied!" : "hold click to copy"}</span>
                                     </div>
                                 </Tooltip>
                                 <img onClick={() => window.open("https://www.linkedin.com/in/tusharxmahajan/", "_blank")} src={linkedIn} alt="" style={{ height: "20px", width: "20px", cursor: "pointer" }} />
@@ -142,19 +161,8 @@ function App() {
                     </div>
 
                     <CaseStudy />
-                    <About />
 
-                    <div className="gallery_title_container" style={{ width: "100%", padding: "2rem", overflow: "hidden", display: "flex", flexDirection: "column", justifyContent: "flex-start" }}>
-                        <div className="gallery_title" style={{
-                            fontSize: "10rem",
-                            lineHeight: "10rem",
-                            letterSpacing: "-2px",
-                            fontWeight: "400",
-                            color: "#D4C8B0",
-                        }}>
-                            Gallery
-                        </div>
-                    </div>
+                    <About />
 
                     <Gallery />
 

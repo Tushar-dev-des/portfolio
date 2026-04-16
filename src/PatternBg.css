@@ -10,6 +10,7 @@
     grid-template-columns: repeat(12, minmax(0, 1fr));
     padding: 0 2rem;
     pointer-events: none;
+    gap: 1rem;
 }
 
 .pattern_bg_one {
