@@ -13,16 +13,30 @@
 
 .about {
     grid-column: 4/span 6;
-    font-size: 32px;
-    line-height: 48px;
+    font-size: 24px;
+    line-height: 32px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 1rem;
     letter-spacing: 0.2px;
-    color: var(--color-primary);
+    color: #D4C8B0;
+    font-weight: 600;
 }
+
+/* .about {
+    grid-column: 4/span 6;
+    font-size: 24px;
+    line-height: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 24rem;
+    letter-spacing: 0.2px;
+    color: #D4C8B0;
+    font-weight: 500;
+} */
 
 .puzzle_container {
     height: 100vh;
@@ -42,5 +56,5 @@
 }
 
 .puzzle div {
-    margin: 0 -2em;
+    margin: 0 -1.25em;
 }
