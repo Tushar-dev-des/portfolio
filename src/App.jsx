@@ -102,7 +102,7 @@ function App() {
                             </div>
                             <div className="hyperlinks">
                                 <a data-tooltip-id="email-tooltip" href="https://mail.google.com/mail/?view=cm&fs=1&to=tusharxmahajan@gmail.com" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "inherit", cursor: "pointer" }} onMouseDown={startHold} onMouseUp={endHold} onMouseLeave={endHold} onTouchStart={startHold} onTouchEnd={endHold}>tusharxmahajan@gmail.com</a>
-                                <Tooltip id="email-tooltip" clickable={true} style={{ zIndex: 10000, backgroundColor: "var(--color-text-white)", color: "var(--color-bg-black)", borderRadius: "0px" }}>
+                                <Tooltip id="email-tooltip" clickable={true} style={{ zIndex: 10000, backgroundColor: "var(--color-primary)", color: "var(--color-bg-dark)", borderRadius: "0px" }}>
                                     <div style={{ fontSize: "12px", lineHeight: "16px", fontWeight: "400" }}>
                                         <span>{emailCopied ? "✓copied!" : "hold click to copy"}</span>
                                     </div>
