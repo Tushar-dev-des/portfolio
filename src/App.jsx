@@ -94,6 +94,11 @@ function App() {
             <div id="smooth-wrapper" ref={wrapperRef}>
                 <div id="smooth-content" ref={contentRef}>
                     <div className="first_fold">
+                        <div className="announcement">
+                            <div>
+                                This site is still under construction
+                            </div>
+                        </div>
                         <div className="navbar">
                             <div>
                                 <a href="#" style={{ textDecoration: "none", color: "var(--color-secondary)", textWrap: "nowrap" }}>
@@ -147,14 +152,13 @@ function App() {
                         </div>
                     </div>
 
-                    <CaseStudy />
+                    {/* <CaseStudy />
 
                     <About />
 
                     <Gallery />
 
-
-                    {/* <FallingPills /> */}
+                    <FallingPills /> */}
 
                 </div>
             </div>
